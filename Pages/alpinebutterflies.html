@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterflies of Sri Lanka</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <h1 id="pageTitle"></h1>
+    <p id="description"></p>
+    <h2>Endemic Butterflies</h2>
+    <ul id="endemicButterflies"></ul>
+
+    <div x-data="butterflydata">
+        <h1 x-text="pageTitle"></h1>
+        <p x-text ="description"></p>
+        <h2>Endamic Butterflies</h2>
+        <ul>
+            <template x-for="butterlfy in endemicbutterflies">
+                <li x-text="butterfly"></li>
+            </template>
+        </ul>
+    </div>
+
+    <!--script>
+        // Fetch the JSON data
+        fetch('butterflies.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('pageTitle').textContent = data.pageTitle;
+                document.getElementById('description').textContent = data.description;
+
+                const endemicButterfliesList = document.getElementById('endemicButterflies');
+                data.endemicButterflies.forEach(butterfly => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = butterfly;
+                    endemicButterfliesList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script-->
+
+    <script>
+        //creating the structure of the data object
+        const butterflyData = {
+            pageTitle: '',
+            description: '',
+            endemicButterflies: []
+        };
+
+        // Fetch the JSON data
+        fetch('butterflies.json')
+            .then(response => response.json())
+            .then(data =>{
+                butterflyData.pageTitle = data.
+                pageTitle;
+                butterflyData.description = data.
+                description;
+                butterflyData.endemicButterflies = data.
+                endemicButterflies;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>

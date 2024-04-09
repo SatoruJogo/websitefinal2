@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <h1>Welcome to the Admin Page</h1>
+    <h2>Newsletter Subscribers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="subscriberTableBody">
+           
+        </tbody>
+    </table>
+
+    <script>
+        function displaySubscribers() {
+            const subscribers = JSON.parse(localStorage.getItem("sharedSubscribers")) || [];
+            const tbody = document.getElementById("subscriberTableBody");
+            tbody.innerHTML = ""; 
+            subscribers.forEach(email => {
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.textContent = email;
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            });
+        }
+
+        
+        displaySubscribers();
+    </script>
+</body>
+</html>

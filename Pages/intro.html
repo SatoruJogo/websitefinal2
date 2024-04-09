@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife in Sri Lanka|About</title>
+    <link rel="icon" href="../Images/2018-animal-planet.jpg.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <style>
+        #context-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body x-data="introData">
+
+<nav>
+    <section class="logo">
+        <a href="#"><img src="../Images/logo.svg (2).png" alt="logo" /></a>
+    </section>
+
+    <section class="toggle">
+        <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+    </section>
+    
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="intro.html">Introduction</a></li>
+        <li><a href="dwc.html">Conservation</a></li>
+        <li class="dropdown">
+            <a href="#">Parks</a>
+            <ul class="submenu">
+                <li><a href="Yala.html">Yala</a></li>
+                <li><a href="Wilpath.html">Wilpaththu</a></li>
+            </ul>
+        </li>
+        <li><a href="Animals.html">Animals</a></li>
+        <li><a href="Leapartd.html">Leopard</a></li>
+        <li><b><a href="login.html">Login</a></b></li>
+    </ul>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(function(){
+        $(".toggle").on("click", function(){
+            if($(".menu").hasClass("active")){
+                $(".menu").removeClass("active");
+                $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+            } else {
+                $(".menu").addClass("active");
+                $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+            }
+        });
+    });
+</script>
+
+<div id="editable-div" @contextmenu.prevent="showContextMenu($event)">
+<section class="headerintro">
+    <h1 x-text="title" contenteditable="true" @contextmenu.prevent="onContextMenu"></h1>
+    <p x-text="title2" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+</section>
+
+<section class="contentintro">
+    <p x-text="content1" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+</section>
+
+<section class="responsive-box">
+    <section class="map">
+        <iframe src="https://maps.google.com/maps?q=sri%20lanka&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 400px;"></iframe>
+    </section>
+    <section class="text">
+        <h2 x-text="title3" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+        <p x-text="conent2" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+    </section>
+</section>
+
+<section class="wildlife-location">
+    <h2 x-text="mountitle1" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+    <section class="map2">
+        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Knuckles,+Sri+Lanka&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+    </section>
+    <section class="images">
+        <img src="../Images/Knuckles_Range1.jpg" alt="Wildlife 1">
+        <img src="../Images/knuckesrange2.jpg" alt="Wildlife 2">
+    </section>
+    <p x-text="mountent1" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+</section>
+
+<section class="wildlife-location">
+    <h2 x-text="mountitle2" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+    <section class="map3">
+        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Sinharaja+Forest+Reserve,+Sri+Lanka&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+    </section>
+    <section class="images">
+        <img src="../Images/sinharaja 1.jpg" alt="Wildlife 1">
+        <img src="../Images/sinharaja2.jpg" alt="Wildlife 2">
+    </section>
+    <p x-text="mountent2" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+</section>
+
+<section class="summary-table">
+    <h2>Summary Table - Wildlife Types</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Animal Name</th>
+                <th>Interesting Facts</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lion-tailed Macaque</td>
+                <td>Endemic to Western Ghats</td>
+                <td><img src="../Images/lion-tailed-macaque.jpg" alt="Macaque"></td>
+            </tr>
+            <tr>
+                <td>Purple-faced Langur</td>
+                <td>Endangered species in Sri Lanka</td>
+                <td><img src="../Images/purple-faced-langur-for table.jpg" alt="Langur"></td>
+            </tr>
+            <tr>
+                <td>Leopard</td>
+                <td>Iconic big cat species</td>
+                <td><img src="../Images/leopard-for-table.jpg" alt="Leopard"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="responsive-box2">
+    <section class="contenteco">
+        <h2 x-text="ecotitle" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+        <p x-text="econtent" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+    </section>
+    <section class="image"></section>
+</section>
+
+<section class="landscape">
+    <h2 x-text="landtle" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+    <p x-text="landtent" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+</section>
+
+  <div id="context-menu">
+    <ul>
+        <li><a href="#" id="bold">Bold</a></li>
+        <li><a href="#" id="italic">Italic</a></li>
+        <li><a href="#" id="highlight">Highlight</a></li>
+        <li><a href="#" id="revert">Revert</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<section class="footer">
+    <section class="footer-contact">
+        <span>Contact Information:</span>
+        <p>Email: srilankanwildlife@gmail.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+    </section>
+    <section class="footer-info">
+        <span>Follow Us:</span>
+        <ul>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a></li>
+        </ul>
+    </section>
+    <section class="newsletter">
+        <h2> Subscribe to our Newsletter</h2>
+        <form id="newsletter-form">
+            <div class="form-group">
+                <label for="email" class="sr-only">Email:</label>
+                <input type="email" id="newsletterEmail" name="email" placeholder="Email:" required>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+</section>
+
+<script>
+    function recordSubscriber(email) {
+        const subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
+        subscribers.push(email);
+        localStorage.setItem("subscribers", JSON.stringify(subscribers));
+        localStorage.setItem("sharedSubscribers", JSON.stringify(subscribers));
+    }
+
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = document.getElementById("newsletterEmail").value;
+        recordSubscriber(email);
+        alert("You have successfully subscribed to the newsletter!");
+    });
+</script>
+
+<script>
+    const introData = {
+        title: '',
+        title2: '',
+        content1: '',
+        title3: '',
+        conent2: '',
+        mountitle1: '',
+        mountent1: '',
+        mountitle2: '',
+        mountent2: '',
+        ecotitle: '',
+        econtent: '',
+        landtle: '',
+        landtent: ''
+    };
+
+    fetch('intro.json')
+        .then(response => response.json())
+        .then(data => {
+            Object.keys(data).forEach(key => {
+                introData[key] = data[key];
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+        let selectedText = '';
+        let selectedRange = null; 
+
+        function showContextMenu(event) {
+            event.preventDefault();
+            const x = event.clientX;
+            const y = event.clientY;
+            const targetElement = document.getElementById('editable-div');
+            const rect = targetElement.getBoundingClientRect(); 
+            const offsetX = x - rect.left; 
+            const offsetY = y - rect.top;
+            const contextMenu = document.getElementById('context-menu');
+            selectedText = window.getSelection().toString();
+            selectedRange = window.getSelection().getRangeAt(0); 
+            contextMenu.style.display = 'block';
+            contextMenu.style.left = offsetX + 'px'; 
+            contextMenu.style.top = offsetY + 'px';
+        }
+
+        function handleContextMenuOption(command) {
+            document.getElementById('context-menu').style.display = 'none';
+            if (command === 'highlight') {
+                const span = document.createElement('span');
+                span.style.backgroundColor = 'red'; 
+                span.appendChild(selectedRange.extractContents());
+                selectedRange.insertNode(span);
+            } else {
+                document.execCommand(command, false, null);
+            }
+        }
+
+        function revertChanges() {
+            document.execCommand('undo');
+            document.getElementById('context-menu').style.display = 'none';
+            document.execCommand('styleWithCSS', false, true);
+            document.execCommand('removeFormat', false, null); 
+            document.getElementById('context-menu').style.display = 'none';
+        }
+
+        document.querySelectorAll('#context-menu a').forEach(item => {
+            item.addEventListener('click', event => {
+                event.preventDefault();
+                const command = event.target.id;
+                const contextMenu = document.getElementById('context-menu');
+                handleContextMenuOption(command);
+            });
+        });
+
+        document.getElementById('revert').addEventListener('click', revertChanges);
+
+        document.addEventListener('click', function(event) {
+            const contextMenu = document.getElementById('context-menu');
+            if (!contextMenu.contains(event.target)) {
+                contextMenu.style.display = 'none';
+            }
+        });
+</script>
+
+</body>
+</html>
