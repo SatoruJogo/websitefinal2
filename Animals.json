@@ -1,0 +1,49 @@
+{
+    "headerTitle": "Animals of Sri Lanka",
+    "headerDescription": "Sri Lankan Wildlife",
+    "contentDescription": "Sri Lanka, nestled in the Indian Ocean, is a haven for diverse and fascinating wildlife. From majestic elephants wandering through lush landscapes to the elusive leopards stealthily navigating the dense jungles, the island boasts a captivating array of creatures. Vibrant bird species, unique reptiles, and marine life further contribute to the country's rich biodiversity.",
+    "animalProfiles": [
+        {
+            "name": "Asian Elephant",
+            "habitat": "Asian Elephants are found in a variety of habitats ranging from dense forests to grasslands and marshes.",
+            "behavior": "These gentle giants are known for their social behavior and close-knit family units. They display high levels of intelligence.",
+            "conservationStatus": "Asian Elephants face threats from habitat loss and human-wildlife conflict. Conservation efforts focus on protected areas and wildlife corridors.",
+            "image": "../Images/asianelephant4.jpg"
+        },
+        {
+            "name": "Sri Lankan Leopard",
+            "habitat": "Sri Lankan Leopards primarily inhabit dense forests but can adapt to various environments, including grasslands and rocky areas.",
+            "behavior": "Known for their stealth and agility, Sri Lankan Leopards are solitary creatures. They are skilled climbers and swimmers.",
+            "conservationStatus": "Considered endangered, the Sri Lankan Leopard faces threats from habitat fragmentation and poaching. Conservation initiatives focus on protecting their habitats.",
+            "image": "../Images/leopard2.webp"
+        },
+        {
+            "name": "Indian Peafowl",
+            "habitat": "Indian Peafowls, or Peacocks, are found in a variety of habitats, including forests, grasslands, and cultivated areas.",
+            "behavior": "Males are renowned for their vibrant plumage and elaborate courtship displays. Peafowls are social birds and often forage in groups.",
+            "conservationStatus": "Indian Peafowls are not considered globally threatened. However, habitat loss and hunting can impact local populations. Conservation efforts involve protecting their natural habitats.",
+            "image": "../Images/peafowl2.jpg"
+        },
+        {
+            "name": "Purple-Faced Langur",
+            "habitat": "Purple-Faced Langurs are predominantly found in the dense rainforests of Sri Lanka, particularly in the central and southwestern regions.",
+            "behavior": "These langurs are arboreal and highly social, living in groups led by a dominant male. They are known for their distinct purple faces, especially in males.",
+            "conservationStatus": "The Purple-Faced Langur faces threats from habitat destruction and fragmentation. Conservation efforts focus on protecting their natural habitats.",
+            "image": "../Images/purplang1.jpg"
+        },
+        {
+            "name": "Sri Lankan Junglefowl",
+            "habitat": "The Sri Lankan Junglefowl is found in a variety of habitats, including forests and scrublands. It is the national bird of Sri Lanka.",
+            "behavior": "Males are known for their striking plumage with vibrant colors. They are ground-dwelling birds, and their calls are a common sound in Sri Lankan forests.",
+            "conservationStatus": "The Sri Lankan Junglefowl is not globally threatened. Conservation efforts involve maintaining suitable habitats and preventing habitat loss.",
+            "image": "../Images/Ceylon_Junglefowl.jpg"
+        },
+        {
+            "name": "Sri Lankan Giant Squirrel",
+            "habitat": "The Sri Lankan Giant Squirrel inhabits a range of forest types, from rainforests to dry zone forests. They are agile climbers and spend much of their time in trees.",
+            "behavior": "These squirrels are diurnal and primarily herbivorous, feeding on fruits, nuts, and leaves. Their distinctive appearance includes a tuft of fur on their ears.",
+            "conservationStatus": "While not globally threatened, the Sri Lankan Giant Squirrel faces habitat loss. Conservation efforts aim to protect their forest habitats and maintain biodiversity.",
+            "image": "../Images/giant-squirrel3.jpg"
+        }
+    ]
+}

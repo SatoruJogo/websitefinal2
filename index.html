@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wildlife in Sri Lanka|Home</title>
+        <link rel="icon" href="../Images/2018-animal-planet.jpg.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#ffffff">
+        <script src="//unpkg.com/alpinejs" defer></script>
+    </head>
+
+<body>
+    <nav>
+        <section class="logo">
+            <a href="#"><img src="../Images/logo.svg (2).png" alt="logo" /></a>
+        </section>
+    
+        <section class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </section>
+        
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="dwc.html">Conservation</a></li>
+            <li class="dropdown">
+                <a href="#">Parks</a>
+                <ul class="submenu">
+                    <li><a href="Yala.html">Yala</a></li>
+                    <li><a href="Wilpath.html">Wilpaththu</a></li>
+                </ul>
+            </li>
+            <li><a href="Animals.html">Animals</a></li>
+            <li><a href="Leapartd.html">Leopard</a></li>
+            <li><b><a href="login.html">Login</a></b></li>
+        </ul>
+    </nav>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+    $(function(){
+        $(".toggle").on("click", function(){
+            if($(".menu").hasClass("active")){
+              $(".menu").removeClass("active");
+              $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>")
+        } else{
+            $(".menu").addClass("active");
+            $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>")
+        }
+     });
+    });
+  </script>
+
+<div  id="editable-div" x-data="indexData" @contextmenu.prevent="showContextMenu($event)">
+    <section class="header">
+        <h1 x-text="title1" contenteditable="true" @contextmenu.prevent="onContextMenu"></h1>
+        <p x-text="title2" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+    </section>
+
+
+
+
+  <section class="content">
+    <p x-text="content1" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+  </section>
+
+ 
+  <section class="turtle-section">
+    <section class="turtle-content">
+        <h2 x-text="title3" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+        <p x-text="content2" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+        <a href="dwc.html" class="button2">Learn more</a>
+    </section>
+</section>
+
+
+
+<section class="park-box">
+    <section class="park-section">
+        <a href="Yala.html">
+            <img src="../Images/yala.jpg" alt="Yala Park">
+            <h2>Yala</h2>
+        </a>
+    </section>
+    <section class="park-section">
+        <a href="Wilpath.html">
+            <img src="../Images/wilpattu.avif" alt="Wilpaththu Park">
+            <h2>Wilpaththu</h2>
+        </a>
+    </section>
+</section>
+
+    <div id="context-menu" style="display: none; position: absolute; background: white; border: 1px solid black; padding: 5px;">
+    <ul>
+        <li><a href="#" id="bold">Bold</a></li>
+        <li><a href="#" id="italic">Italic</a></li>
+        <li><a href="#" id="highlight">Highlight</a></li>
+        <li><a href="#" id="revert">Revert</a></li>
+    </ul>
+    </div>
+
+
+
+<section class="animals-box">
+    <h2 x-text="title4" contenteditable="true" @contextmenu.prevent="onContextMenu"></h2>
+    <p x-text="content3" contenteditable="true" @contextmenu.prevent="onContextMenu"></p>
+    <a href="Animals.html" class="button">Learn more</a>
+</section>
+</div>
+
+
+<script>
+
+    const indexData = {
+        "title1":'',
+        "title2":'',
+        "content1":'',
+        "title3":'',
+        "content2":'',
+        "title4":'',
+        "content3":''
+    }
+
+    
+
+    fetch('index.json')
+        .then(response => response.json())
+        .then(data => {
+           indexData.title1 = data.title1
+           indexData.title2 = data.title2
+           indexData.content1 = data.content1
+           indexData.title3 = data.title3
+           indexData.content2 = data.content2
+           indexData.title4 = data.title4
+           indexData.content3 = data.content3
+        })
+    .catch(error => console.error('Error fetching data:', error));
+
+let selectedText = '';
+let selectedRange = null; 
+
+function showContextMenu(event) {
+    event.preventDefault();
+    const x = event.clientX;
+    const y = event.clientY;
+    const targetElement = document.getElementById('editable-div');
+    const rect = targetElement.getBoundingClientRect(); 
+    const offsetX = x - rect.left; 
+    const offsetY = y - rect.top;
+    const contextMenu = document.getElementById('context-menu');
+    selectedText = window.getSelection().toString();
+    selectedRange = window.getSelection().getRangeAt(0); 
+    contextMenu.style.display = 'block';
+    contextMenu.style.left = offsetX + 'px'; 
+    contextMenu.style.top = offsetY + 'px';
+}
+
+function handleContextMenuOption(command) {
+    document.getElementById('context-menu').style.display = 'none';
+    if (command === 'highlight') {
+        const span = document.createElement('span');
+        span.style.backgroundColor = 'red'; 
+        span.appendChild(selectedRange.extractContents());
+        selectedRange.insertNode(span);
+    } else {
+        document.execCommand(command, false, null);
+    }
+}
+
+function revertChanges() {
+    document.execCommand('undo');
+    document.getElementById('context-menu').style.display = 'none';
+    document.execCommand('styleWithCSS', false, true);
+    document.execCommand('removeFormat', false, null); 
+    document.getElementById('context-menu').style.display = 'none';
+    //selectedRange = null;
+}
+
+document.querySelectorAll('#context-menu a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        const command = event.target.id;
+        const contextMenu = document.getElementById('context-menu');
+        handleContextMenuOption(command);
+    });
+});
+
+document.getElementById('revert').addEventListener('click', revertChanges);
+
+document.addEventListener('click', function(event) {
+    const contextMenu = document.getElementById('context-menu');
+    if (!contextMenu.contains(event.target)) {
+        contextMenu.style.display = 'none';
+    }
+});
+
+document.getElementById('editable-div').addEventListener('contextmenu', showContextMenu);
+</script>
+
+
+<section class="footer">
+    <section class="footer-contact">
+        <span>Contact Information:</span>
+        <p>Email: srilankanwildlife@gmail.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+    </section>
+    <section class="footer-info">
+        <span>Follow Us:</span>
+        <ul>
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a></li>
+        </ul>
+    </section>
+    <section class="newsletter">
+        <h2> Subscribe to our Newsletter</h2>
+        <form id="newsletter-form">
+            <div class="form-group">
+                <label for="email" class="sr-only">Email:</label>
+                <input type="email" id="newsletterEmail" name="email" placeholder="Email:" required>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+</section>
+</section>
+
+<script>
+    function recordSubscriber(email) {
+        const subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
+        subscribers.push(email);
+        localStorage.setItem("subscribers", JSON.stringify(subscribers));
+        localStorage.setItem("sharedSubscribers", JSON.stringify(subscribers));
+    }
+
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = document.getElementById("newsletterEmail").value;
+        recordSubscriber(email);
+        alert("You have successfully subscribed to the newsletter!");
+    });
+</script>
+
+
+
+</body>
+</html>
