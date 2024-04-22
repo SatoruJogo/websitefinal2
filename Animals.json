@@ -29,21 +29,21 @@
             "habitat": "Purple-Faced Langurs are predominantly found in the dense rainforests of Sri Lanka, particularly in the central and southwestern regions.",
             "behavior": "These langurs are arboreal and highly social, living in groups led by a dominant male. They are known for their distinct purple faces, especially in males.",
             "conservationStatus": "The Purple-Faced Langur faces threats from habitat destruction and fragmentation. Conservation efforts focus on protecting their natural habitats.",
-            "image": "../Images/purplang1.jpg"
+            "image": ../Images/purplang1.jpg
         },
         {
             "name": "Sri Lankan Junglefowl",
             "habitat": "The Sri Lankan Junglefowl is found in a variety of habitats, including forests and scrublands. It is the national bird of Sri Lanka.",
             "behavior": "Males are known for their striking plumage with vibrant colors. They are ground-dwelling birds, and their calls are a common sound in Sri Lankan forests.",
             "conservationStatus": "The Sri Lankan Junglefowl is not globally threatened. Conservation efforts involve maintaining suitable habitats and preventing habitat loss.",
-            "image": "../Images/Ceylon_Junglefowl.jpg"
+            "image": ../Ceylon_Junglefowl.jpg
         },
         {
             "name": "Sri Lankan Giant Squirrel",
             "habitat": "The Sri Lankan Giant Squirrel inhabits a range of forest types, from rainforests to dry zone forests. They are agile climbers and spend much of their time in trees.",
             "behavior": "These squirrels are diurnal and primarily herbivorous, feeding on fruits, nuts, and leaves. Their distinctive appearance includes a tuft of fur on their ears.",
             "conservationStatus": "While not globally threatened, the Sri Lankan Giant Squirrel faces habitat loss. Conservation efforts aim to protect their forest habitats and maintain biodiversity.",
-            "image": "../Images/giant-squirrel3.jpg"
+            "image": giant-squirrel3.jpg
         }
     ]
 }
