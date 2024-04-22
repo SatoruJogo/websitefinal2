@@ -15,14 +15,14 @@
             "habitat": "Sri Lankan Leopards primarily inhabit dense forests but can adapt to various environments, including grasslands and rocky areas.",
             "behavior": "Known for their stealth and agility, Sri Lankan Leopards are solitary creatures. They are skilled climbers and swimmers.",
             "conservationStatus": "Considered endangered, the Sri Lankan Leopard faces threats from habitat fragmentation and poaching. Conservation initiatives focus on protecting their habitats.",
-            "image": "../Images/leopard2.webp"
+            "image": "leopard2.webp"
         },
         {
             "name": "Indian Peafowl",
             "habitat": "Indian Peafowls, or Peacocks, are found in a variety of habitats, including forests, grasslands, and cultivated areas.",
             "behavior": "Males are renowned for their vibrant plumage and elaborate courtship displays. Peafowls are social birds and often forage in groups.",
             "conservationStatus": "Indian Peafowls are not considered globally threatened. However, habitat loss and hunting can impact local populations. Conservation efforts involve protecting their natural habitats.",
-            "image": "../Images/peafowl2.jpg"
+            "image": "../peafowl2.jpg"
         },
         {
             "name": "Purple-Faced Langur",
