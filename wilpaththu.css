@@ -3,7 +3,7 @@
 .headerwilpath{
     min-height: 75vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Sri_Lankan_sloth_bear.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Sri_Lankan_sloth_bear.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
